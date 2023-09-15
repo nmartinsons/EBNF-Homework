@@ -1,0 +1,45 @@
+<start> ::= "Niks_Niklavs_Martinsons_221RDB485"
+
+<number> ::= <nonzero_digit> <digit>*
+
+<nonzero_digit> ::= [1-9]
+
+<digit> ::= [0-9]
+
+<assignment> ::= <variable> "=" <expression>
+
+<expression> ::= <number> | <number> "+" <number> | <number> "-" <number>
+
+<term> ::= <number> "*" <number> | <number> "/" <number>
+
+<factor> ::=  "(" <expression> ")"
+
+<variable> ::= <letter>+
+
+<letter> ::= [a-z] | [A-Z]
+
+<loops> ::= "for " <variable> " in " <array> <statements> 
+
+<conditionals> ::= "if " <condition> " then " <statements> " else " <statements>
+
+<condition> ::= <expression> " == " <expression> | <expression> " != " <expression>
+
+<array> ::= "[" <number> "]"
+
+<array_num> ::= "[" <number_list> "]"
+
+<array_let> ::= "[" <letter_list> "]"
+
+<number_list> ::= <number> ("," <number>)*
+
+<letter_list> ::= <letter> ("," <letter>)*
+
+<functions> ::= "function" <variable> "(" <parameters> ")" "{" <statements> "}"
+
+<parameters> ::= <variable> ("," <variable>)*
+
+<statements> ::= <assignment> | <loops> | <conditionals> | <function_call> | "return " <expression>
+
+<function_call> ::= <variable> "(" <arguments> ")"
+
+<arguments> ::= <number> | <array> | <array_let> | <array_num>
