@@ -1,3 +1,5 @@
+/* I was using https://bnfplayground.pauliankline.com webpage for testing */
+
 <start> ::= "Niks_Niklavs_Martinsons_221RDB485"
 
 <number> ::= <nonzero_digit> <digit>*
